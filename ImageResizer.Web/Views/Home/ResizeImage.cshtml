@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "ResizeImage";
+}
+
+<h2>@ViewBag.Message</h2>
+
+<form action="ResizeImage" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="imageToUpload">Image:</label>
+        <input type="file" class="form-control" id="imageToUpload" name="imageToUpload" accept=".gif,.png,.jpg,.jpeg,.bmp" />
+        <p class="help-block">Accept only .gif,.png,.jpg,.jpeg and .bmp</p>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload & Resize</button>
+</form>
